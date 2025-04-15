@@ -7,10 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-gray-200: oklch(92.8% 0.006 264.531);
-    --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
@@ -226,9 +224,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .w-30 {
     width: var(--spacing-30);
   }
@@ -238,12 +233,6 @@
   .flex-1 {
     flex: 1;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -252,9 +241,6 @@
   }
   .flex-col {
     flex-direction: column;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
   }
   .divide-y {
     :where(& > :not(:last-child)) {
@@ -293,9 +279,6 @@
   .bg-main-blue {
     background-color: var(--color-main-blue);
   }
-  .bg-main-gray {
-    background-color: var(--color-main-gray);
-  }
   .bg-main-green {
     background-color: var(--color-main-green);
   }
@@ -314,9 +297,6 @@
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
-  .px-20 {
-    padding-inline: calc(var(--spacing) * 20);
-  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -325,9 +305,6 @@
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
-  }
-  .py-20 {
-    padding-block: calc(var(--spacing) * 20);
   }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
@@ -389,19 +366,7 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .placeholder-gray-600 {
-    &::placeholder {
-      color: var(--color-gray-600);
-    }
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .placeholder\:text-gray-600 {
     &::placeholder {
       color: var(--color-gray-600);
     }
@@ -457,34 +422,9 @@
       margin-bottom: calc(var(--spacing) * 3);
     }
   }
-  .md\:mb-4 {
-    @media (width >= 48rem) {
-      margin-bottom: calc(var(--spacing) * 4);
-    }
-  }
-  .md\:-ml-0 {
-    @media (width >= 48rem) {
-      margin-left: calc(var(--spacing) * -0);
-    }
-  }
-  .md\:-ml-2 {
-    @media (width >= 48rem) {
-      margin-left: calc(var(--spacing) * -2);
-    }
-  }
-  .md\:-ml-4 {
-    @media (width >= 48rem) {
-      margin-left: calc(var(--spacing) * -4);
-    }
-  }
   .md\:-ml-8 {
     @media (width >= 48rem) {
       margin-left: calc(var(--spacing) * -8);
-    }
-  }
-  .md\:ml-0 {
-    @media (width >= 48rem) {
-      margin-left: calc(var(--spacing) * 0);
     }
   }
   .md\:block {
@@ -548,16 +488,6 @@
       background-color: var(--color-white);
     }
   }
-  .md\:px-20 {
-    @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 20);
-    }
-  }
-  .md\:pt-30 {
-    @media (width >= 48rem) {
-      padding-top: var(--spacing-30);
-    }
-  }
   .md\:pt-40 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 40);
@@ -609,13 +539,6 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
-  .md\:placeholder\:text-gray-500 {
-    @media (width >= 48rem) {
-      &::placeholder {
-        color: var(--color-gray-500);
-      }
-    }
-  }
 }
 @property --tw-divide-y-reverse {
   syntax: "*";
@@ -634,11 +557,6 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-shadow {
   syntax: "*";
@@ -712,7 +630,6 @@
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
